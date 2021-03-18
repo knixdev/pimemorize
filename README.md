@@ -5,6 +5,8 @@
 Pi Memorize is a simple CLI tool to check how well you know Pi. 
 It will by default prompt you once for all decimal places starting from the first.
 
+It colorizes your attempt to show which digits you have incorrect (if any) using [Fatih's
+Color library](https://github.com/fatih/color).
 - **-limit:** (int)
 Limit the digit upper bound for random digits (default 100001)
 - **-loop:** (bool)
