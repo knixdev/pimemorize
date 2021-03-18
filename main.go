@@ -19,7 +19,7 @@ const (
 var (
 	random = flag.Bool("random", false, "Pick a random digit to test your PI memory")
 	startingDigit = flag.Int("start", 1, "Starting digit for prompt")
-	displayTip = flag.Bool("tipme", false, "Display the digit tip")
+	displayTip = flag.Bool("tipme", false, "Display a tip of starting digits")
 	loop = flag.Bool("loop", false, "Keep trying forever until a control signal")
 	limitRandom = flag.Int("limit", DigitsHeld, "Limit the digit upper bound for random digits")
 )
@@ -29,7 +29,7 @@ func main() {
 	rand.Seed(time.Now().UnixNano())
 	fmt.Printf("PI Memory Checker version %s\n", AppVersion)
 	if *displayTip {
-		fmt.Printf("Digits %d - %d is: %s\n", *startingDigit, *startingDigit+5, PI[*startingDigit+1:*startingDigit+6])
+		fmt.Printf("Digits %d - %d is: %s\n", *startingDigit, *startingDigit+4, PI[*startingDigit+1:*startingDigit+6])
 	}
 	if *random {
 		reader := bufio.NewReader(os.Stdin)
